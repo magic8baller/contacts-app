@@ -1,4 +1,7 @@
 const app = require('express')();
+const connectDB = require('./config/db.js')
+
+connectDB();
 
 app.get('/', (req, res) => res.json({msg: 'welcome to the contacts api'}))
 const PORT = process.env.PORT || 5000
